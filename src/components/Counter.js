@@ -9,7 +9,7 @@ const Counter = ({ count, onDecrement, onIncrement, onReset }) => {
           <span>{count}</span>
           <button onClick={onIncrement}>+</button>
           <br />
-          <button onClick={onReset}>Reset</button>
+          // <button onClick={onReset}>Reset</button>
         </div>
       </div>
     );
