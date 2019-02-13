@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Counter = ({ count, onDecrement, onIncrement }) => {
+const Counter = ({ onDecrement, onIncrement, onButtonCount, buttonCount }) => {
 
     return (
       <div>
@@ -9,6 +9,7 @@ const Counter = ({ count, onDecrement, onIncrement }) => {
           <span>{count}</span>
           <button onClick={onIncrement}>+</button>
           <br />
+          <button onClick={onButtonCount}>Times the Increment/Decrement buttons have been clicked: {buttonCount} </button>
           </div>
       </div>
     );

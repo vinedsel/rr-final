@@ -5,3 +5,7 @@ export const increment = () => ({
 export const decrement = () => ({
   type: 'DECREMENT'
 });
+
+export const buttonCount = () => ({
+  type: 'BUTTONCOUNT'
+});

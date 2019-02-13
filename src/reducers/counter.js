@@ -14,11 +14,11 @@ function counterReducer(state = initialState, action) {
         ...state,
         count: state.count - 1
       };
-    // case 'RESET':
-    //   return {
-    //     ...state,
-    //     count: (state.count = 0)
-    //   };
+    case 'BUTTONCOUNT':
+      return {
+        ...state,
+        count: (state.count = 0)
+      };
     default:
       return state;
   }
