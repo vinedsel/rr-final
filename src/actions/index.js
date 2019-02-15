@@ -6,6 +6,6 @@ export const decrement = () => ({
   type: 'DECREMENT'
 });
 
-export const buttonCount = () => ({
-  type: 'BUTTONCOUNT'
+export const timesClicked = () => ({
+  type: 'TIMESCLICKED'
 });

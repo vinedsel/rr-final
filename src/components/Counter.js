@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Counter = ({ onDecrement, onIncrement, onButtonCount, buttonCount }) => {
+const Counter = ({ count, onDecrement, onIncrement, timesClicked, onInputNumberChange, numberInputted, onInputNumber }) => {
 
     return (
       <div>
@@ -8,9 +8,10 @@ const Counter = ({ onDecrement, onIncrement, onButtonCount, buttonCount }) => {
           <button onClick={onDecrement}>-</button>
           <span>{count}</span>
           <button onClick={onIncrement}>+</button>
-          <br />
-          <button onClick={onButtonCount}>Times the Increment/Decrement buttons have been clicked: {buttonCount} </button>
-          </div>
+        </div><br />
+          <span><h4>Times the increment/decrement buttons have been clicked:</h4> {timesClicked}</span>
+          <input onChange={event => onInputNumberChange(event.target.value)} type="text" value={numberInputted}/>
+          <button onClick={onInputNumber}>Change Count Number</button>
       </div>
     );
 }
