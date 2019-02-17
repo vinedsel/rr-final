@@ -11,7 +11,7 @@ class App extends React.Component {
         <Counter count={this.props.count} onIncrement={this.props.onIncrement} onDecrement={this.props.onDecrement}/>
         <h4>Times the increment/decrement buttons have been clicked:</h4> {this.props.timesClicked}<br />
         <input onChange={event => onInputNumberChange(event.target.value)}/>
-        <button onClick={onInputNumber}>Change Count Number</button>
+        <button onClick={this.props.onInputNumber}>Change Count Number</button>
       </div>
     );
   }
