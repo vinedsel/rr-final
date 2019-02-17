@@ -9,3 +9,7 @@ export const decrement = () => ({
 export const timesClicked = () => ({
   type: 'TIMESCLICKED'
 });
+
+export const onInputNumberChange = () => ({
+  type: 'ONINPUTNUMBERCHANGE'
+});

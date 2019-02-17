@@ -23,6 +23,11 @@ function counterReducer(state = initialState, action) {
         ...state,
         count: (state.count = 0)
       };
+    case 'ONINPUTNUMBERCHANGE':
+      return {
+        ...state,
+        count: (state.count = )
+        }
     default:
       return state;
   }
