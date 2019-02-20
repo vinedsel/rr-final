@@ -10,6 +10,10 @@ export const timesClicked = () => ({
   type: 'TIMESCLICKED'
 });
 
+export const onInputNumber = () => ({
+  type: 'ONINPUTNUMBER'
+});
+
 export const onInputNumberChange = () => ({
   type: 'ONINPUTNUMBERCHANGE'
 });

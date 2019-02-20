@@ -1,17 +1,14 @@
 import React from 'react';
 import Counter from './Counter';
 import { connect } from 'react-redux';
-import { increment, decrement, timesClicked, onInputNumberChange } from '../actions/index';
+import { increment, decrement, timesClicked, onInputNumber, onInputNumberChange } from '../actions/index';
 
 class App extends React.Component {
   render() {
     return (
       <div>
         <h3>Counter</h3>
-        <Counter count={this.props.count} onIncrement={this.props.onIncrement} onDecrement={this.props.onDecrement} ononInputNumberChange={this.props.ononInputNumberChange}/>
-        <span><h4>Times the increment/decrement buttons have been clicked:{this.props.timesClicked}</h4></span>
-        <input onChange={event => onInputNumberChange(event.target.value)}/>
-        <button onClick={this.props.onInputNumber}>Change Count Number</button>
+        <Counter count={this.props.count} timesClicked={this.props.timesClicked} onIncrement={this.props.onIncrement} onDecrement={this.props.onDecrement} onInputNumber={this.props.onInputNumber} onInputNumberChange={this.props.onInputNumberChange} />
       </div>
     );
   }
@@ -22,6 +19,7 @@ function mapDispatchToProps(dispatch) {
     onIncrement: () => dispatch(increment()),
     onDecrement: () => dispatch(decrement()),
     ontimesClicked: () => dispatch(timesClicked()),
+    ononInputNumber: () => dispatch(onInputNumber()),
     ononInputNumberChange: () => dispatch(onInputNumberChange())
   };
 }

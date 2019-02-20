@@ -25,11 +25,16 @@ function counterReducer(state = initialState, action) {
         timesClicked: 0,
         numberInputted: null
       };
+    case 'ONINPUTNUMBER':
+      return {
+        ...state,
+        numberInputted: parseInt(state.count)
+      }
     case 'ONINPUTNUMBERCHANGE':
       return {
         ...state,
         numberInputted: action.number
-        }
+      }
     default:
       return state;
   }
