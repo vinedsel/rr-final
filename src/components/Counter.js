@@ -8,7 +8,9 @@ const Counter = ({ count, onDecrement, onIncrement, timesClicked, onInputNumberC
           <button onClick={onDecrement}>-</button>
           <span>{count}</span>
           <button onClick={onIncrement}>+</button>
-        </div>
+        </div><br />
+          <input onChange={event => onInputNumberChange(event.target.value)} type="text" value={numberInputted}/>
+          <button onClick={onInputNumber}>Change Count Number</button>
       </div>
     );
 }
