@@ -21,12 +21,14 @@ function counterReducer(state = initialState, action) {
     case 'TIMESCLICKED':
       return {
         ...state,
-        count: (state.count = 0)
+        count: parseInt(state.numberInputted),
+        timesClicked: 0,
+        numberInputted: null
       };
     case 'ONINPUTNUMBERCHANGE':
       return {
         ...state,
-        count: (state.count = )
+        numberInputted: action.number
         }
     default:
       return state;
